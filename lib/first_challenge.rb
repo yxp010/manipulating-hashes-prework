@@ -14,8 +14,8 @@ def first_challenge
   }
 
   #your code here
-  contacts.collect do |name, info|
-    info[:favorite_icecream_flavors].delete("strawberry") if info[:favorite_icecream_flavors].include?("strawberry")
+  contacts.values.collect do |key, value|
+    value.delete("strawberry") if value.include?("strawberry")
   end
 
 
