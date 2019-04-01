@@ -13,13 +13,9 @@ def first_challenge
     }
   }
 
-  #your code here
-  contacts.values.collect do |key, value|
-    if value.kind_of?(Array)
-      value.delete("strawberry") if value.include?("strawberry")
-    end
+  contacts.delete_if do |key, value|
+    value[:favorite_icecream_flavors].include?("strawberry")
   end
-
-
   #remember to return your newly altered contacts hash!
+  contacts
 end
