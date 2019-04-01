@@ -17,4 +17,5 @@ def first_challenge
     info[:favorite_icecream_flavors].include?("strawberry")
   end
   #remember to return your newly altered contacts hash!
+  contacts
 end
