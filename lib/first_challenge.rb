@@ -17,7 +17,7 @@ def first_challenge
   contacts.values.collect do |key, value|
     if value.kind_of?(Array)
       value.delete("strawberry") if value.include?("strawberry")
-
+    end
   end
 
 
