@@ -13,8 +13,8 @@ def first_challenge
     }
   }
 
-  contacts.delete_if do |key, value|
-    value[:favorite_icecream_flavors].include?("strawberry")
+  contacts.values[:favorite_icecream_flavors].delete_if do |flavor|
+    flavor == "strawberry"
   end
   #remember to return your newly altered contacts hash!
 end
